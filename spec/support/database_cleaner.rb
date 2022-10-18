@@ -1,6 +1,10 @@
+require 'database_cleaner/active_record'
+
 RSpec.configure do |config|
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
-  end
+
+  DatabaseCleaner.clean_with :truncation
+
+  DatabaseCleaner.strategy = :transaction
+
 end
+
