@@ -19,6 +19,13 @@ RSpec.describe PopulationQueryService, type: :service do
     end
   end
 
+   describe "#males_count" do
+    it "counts total amount of males in population" do
+      population_service = PopulationQueryService.new
+      expect(population_service.males_count).to eq(5)
+    end
+  end
+
 end
 
 
